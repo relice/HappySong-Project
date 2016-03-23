@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">释放立即刷新</string>
+    <string name="pull_to_refresh_refreshing_label">正在刷新数据中...</string>
+
+    <!-- Just use standard Pull Down String when pulling up. These can be set for languages which require it -->
+    /*xxxxxxxxxxxxxxxxxxxxxx源码修改：源码注释xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+    <!--<string name="pull_to_refresh_from_bottom_pull_label">上拉加载更多</string>-->
+    /*xxxxxxxxxxxxxxxxxxxxxx源码修改：源码注释xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+    <string name="pull_to_refresh_from_bottom_pull_label">没有更多数据</string>
+    <string name="pull_to_refresh_from_bottom_release_label">松开后加载</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">加载中\u2026</string>
+    <string name="common_load_more_end">没有更多了</string>
+
+</resources>

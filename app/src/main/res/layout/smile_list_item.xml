@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/black_border">
+
+        <TextView
+            android:id="@+id/main_edt_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="Title"
+            android:textColor="@color/comm_content_title_color"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/main_edt_tv"
+            android:layout_marginBottom="@dimen/content_item_margin_bottom"
+            android:layout_marginLeft="@dimen/content_item_margin"
+            android:layout_marginRight="@dimen/content_item_margin"
+            android:background="@color/accent"/>
+
+        <TextView
+            android:id="@+id/cont_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line1"
+            android:padding="5dp"
+            android:text="content.."
+            android:textColor="@color/comm_content_color2"
+            android:textSize="14sp"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/cont_iv"
+            android:contentDescription="frsco 显示图片框架"
+            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cont_tv"
+            android:layout_centerInParent="true"
+            android:padding="5dp"
+            android:visibility="gone"
+            fresco:placeholderImage="@mipmap/ic_launcher"
+            fresco:viewAspectRatio="1.33"/>
+    </RelativeLayout>
+</RelativeLayout>
+
+
+

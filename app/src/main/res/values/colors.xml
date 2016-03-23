@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- toolbar（actionbar）颜色 -->
+    <color name="colorPrimary">#1c445c</color>
+    <!-- 状态栏颜色 -->
+    <color name="colorPrimaryDark">#1c445c</color>
+    <color name="colorAccent">#FF4081</color>
+    <!-- 窗口的背景颜色 -->
+    <color name="windows_bg_white">#ffffff</color>
+
+    <color name="comm_title_color">#33e0e8</color>
+    <color name="comm_content_title_color">#ef8778</color>
+    <color name="comm_content_color">#f9dd89</color>
+    <color name="comm_content_color2">#fbfaf7</color>
+    <color name="black">#000000</color>
+    <color name="white_transparent">#75ffffff</color>
+    <color name="very_light_grey">#e1e1e1</color>
+    <color name="primary">#3F51B5</color>
+    <color name="primary_dark">#303F9F</color>
+    <color name="primary_light">#C5CAE9</color>
+    <color name="accent">#03A9F4</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#cbcbcb</color>
+</resources>

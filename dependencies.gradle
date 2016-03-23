@@ -1,0 +1,9 @@
+ext {
+    retrofitVersion = '2.0.0-beta2'
+
+    dependencies = [
+            retrofit             : "com.squareup.retrofit:retrofit:$retrofitVersion",
+            retrofitConverterGson: "com.squareup.retrofit:converter-gson:$retrofitVersion",
+            retrofitAdapterRxJava: "com.squareup.retrofit:adapter-rxjava:$retrofitVersion",
+    ]
+}
