@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary">
+
+    <RelativeLayout
+        android:id="@+id/page_title_layout_html"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <ImageView
+            android:id="@+id/page_title_close_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/title_back_selector"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/page_title_back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/title_back_selector"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/page_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/page_title_close_img"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="title"
+            android:textColor="@color/icons"
+            android:textSize="18sp"/>
+
+        <ImageView
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/very_light_grey"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webview_layout_html"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/page_title_layout_html"
+        android:background="@color/comm_content_color2"></WebView>
+
+</RelativeLayout>
