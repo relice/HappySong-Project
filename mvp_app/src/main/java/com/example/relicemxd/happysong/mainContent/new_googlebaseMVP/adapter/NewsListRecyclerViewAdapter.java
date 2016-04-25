@@ -40,7 +40,7 @@ public class NewsListRecyclerViewAdapter extends RecyclerView.Adapter {
         mContext = checkNotNull(context);
         //Fresco 图片加载
         Fresco.initialize(context);
-        
+
     }
 
     public void seListInfos(List<NewInfo.DetailEntity> newInfos) {
