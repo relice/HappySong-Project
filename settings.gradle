@@ -1,1 +1,1 @@
-include ':mvp_app', ':mylibrary'
+include ':mvp_app', ':mylibrary', ':videolibrary'

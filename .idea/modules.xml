@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/HappySong.iml" filepath="$PROJECT_DIR$/HappySong.iml" />
       <module fileurl="file://$PROJECT_DIR$/mvp_app/mvp_app.iml" filepath="$PROJECT_DIR$/mvp_app/mvp_app.iml" />
       <module fileurl="file://$PROJECT_DIR$/mylibrary/mylibrary.iml" filepath="$PROJECT_DIR$/mylibrary/mylibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/videolibrary/videolibrary.iml" filepath="$PROJECT_DIR$/videolibrary/videolibrary.iml" />
     </modules>
   </component>
 </project>

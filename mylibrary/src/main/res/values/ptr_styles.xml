@@ -10,7 +10,7 @@
     </style>
 
     <!--通用按钮设置-->
-    <style name="comm_button_wid_hei_style">
+    <style name="comm_button_wid_red_style">
         <item name="android:layout_width">250dp</item>
         <item name="android:layout_height">44dp</item>
         <item name="android:background">@drawable/comm_button_selector</item>

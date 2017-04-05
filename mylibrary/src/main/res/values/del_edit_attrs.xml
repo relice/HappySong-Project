@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--带手机号码格式的 右边删除的editText-->
+    <declare-styleable name="SDelEditText">
+        <attr name="isTel" format="boolean" />
+        <attr name="delPaddingRight" format="dimension"></attr>
+    </declare-styleable>
+</resources>

@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.example.relicemxd.leanrrv"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest package="com.happysong.app"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+    <!--允许联网 -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!--获取GSM（2g）、WCDMA（联通3g）等网络状态的信息  -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!--保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!--获取sd卡写的权限，用于文件上传和下载-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!--允许读取手机状态 用于创建BmobInstallation-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
 
     <application
-        android:name="com.example.relicemxd.happysong.InfoApplication"
+        android:name=".HappySongApp"
         android:allowBackup="true"
         android:icon="@mipmap/zan_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppCompatTheme"
+        tools:replace="android:name">
         <!--在下面activity 不应该添加 theme 否则没沉淀式效果-->
         <activity
-            android:name="com.example.relicemxd.happysong.main_googleRxbusMVP.MainActivity">
+            android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -23,19 +39,81 @@
         </activity>
 
         <activity
-            android:name="com.example.relicemxd.happysong.mainContent.smile_commonMVP.EditTextActivity"
+            android:name=".mainContent.smileModule.EditTextActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name="com.example.relicemxd.happysong.utilsUI.Html5Activity"
+            android:name=".ui.Html5Activity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="com.example.relicemxd.happysong.utilsUI.PhotoViewActivity"
+            android:name=".ui.PhotoViewActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Black.NoTitleBar"/>
+
+
+        <activity
+            android:name=".utils.gsyvideoplayer.VideoMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent"/>
+        <activity
+            android:name=".utils.gsyvideoplayer.PlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent"/>
+        <activity
+            android:name=".utils.gsyvideoplayer.ListVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent"/>
+        <activity
+            android:name=".utils.gsyvideoplayer.ListVideo2Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Translucent"/>
+        <activity
+            android:name=".utils.gsyvideoplayer.DetailPlayer"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".utils.gsyvideoplayer.RecyclerView2Activity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".utils.gsyvideoplayer.DetailListPlayer"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".utils.gsyvideoplayer.WebDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".utils.gsyvideoplayer.RecyclerViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.CollectDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.CollectActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.LoginDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/login_dialog" />
+        <activity
+            android:name=".ui.CommentDialogActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/login_dialog"/>
+        <activity
+            android:name=".ui.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
 
         <!-- 友盟配置文件(会被Application里的方法覆盖) -->
         <meta-data

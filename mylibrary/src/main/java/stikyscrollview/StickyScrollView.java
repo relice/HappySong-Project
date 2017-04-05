@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.widget.ScrollView;
 
-import com.example.relicemxd.mylibrary.R;
+import com.happysong.mylibrary.R;
 
 import java.util.ArrayList;
 

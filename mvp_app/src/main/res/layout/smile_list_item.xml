@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content">
 
     <RelativeLayout
         android:id="@+id/item_list_rl"
@@ -10,10 +11,23 @@
         android:layout_margin="15dp"
         android:background="@drawable/black_border">
 
+        <ImageView
+            android:id="@+id/gif_notic_iv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/gif_notic"
+            android:visibility="gone"
+            />
+
         <TextView
             android:id="@+id/item_title_tv"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:layout_alignLeft="@+id/cont_iv"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/cont_iv"
             android:ellipsize="end"
             android:gravity="center"
             android:singleLine="true"
@@ -44,7 +58,6 @@
 
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/cont_iv"
-            xmlns:fresco="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/item_cont_tv"
@@ -52,7 +65,16 @@
             android:contentDescription="frsco 显示图片框架"
             android:padding="5dp"
             android:visibility="gone"
-            fresco:placeholderImage="@mipmap/ic_launcher"
+            fresco:failureImage="@drawable/error_img"
+            fresco:progressBarAutoRotateInterval="500"
+            fresco:progressBarImage="@drawable/icon_progress_bar"
+            fresco:progressBarImageScaleType="centerInside"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="5dp"
+            fresco:roundingBorderColor="@color/primary"
             fresco:viewAspectRatio="1.33"/>
     </RelativeLayout>
 </RelativeLayout>

@@ -1,6 +1,17 @@
 <resources>
-    <string name="app_name">HappySong</string>
+    <string name="app_name">欢乐颂</string>
     <string name="action_settings">Settings</string>
     <string name="drawer_open">打开</string>
     <string name="drawer_close">关闭</string>
+    <string name="header">平如海棠</string>
+    <string name="collect">收藏</string>
+    <string name="heSay">他说</string>
+    <string name="youSar">你说</string>
+    <string name="weAre">我们</string>
+    <string name="videos">学习视频</string>
+    <string name="opensource">开源框架</string>
+    <string name="search">搜索</string>
+    <string name="map">导航</string>
+
+    <string name="detail_text">detail_text</string>
 </resources>

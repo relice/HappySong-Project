@@ -4,6 +4,7 @@
     <color name="colorPrimary">#1c445c</color>
     <!-- 状态栏颜色 -->
     <color name="colorPrimaryDark">#1c445c</color>
+    <color name="colorPrimaryPrueDark">#316381</color>
     <color name="colorAccent">#FF4081</color>
     <!-- 窗口的背景颜色 -->
     <color name="windows_bg_white">#ffffff</color>

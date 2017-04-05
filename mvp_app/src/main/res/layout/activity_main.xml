@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical">
@@ -33,24 +34,16 @@
                 android:background="@android:color/white"/>
         </LinearLayout>
 
-        <!-- 侧滑菜单内容 -->
-        <LinearLayout
-            android:id="@+id/main_left_ll"
+        <!-- 侧滑菜单内容 在代码中不用设置什么只要在xml中添加DrawerLayout
+        或者一个linerlayout就可以了-->
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:background="?attr/colorPrimary"
-            android:clickable="true"
-            android:orientation="vertical"
-            android:padding="8dp">
+            android:layout_gravity="left"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/menu_drawer"/>
 
-            <ListView
-                android:id="@+id/main_left_lv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:divider="@null"
-                android:scrollbars="none"/>
-        </LinearLayout>
     </android.support.v4.widget.DrawerLayout>
 
 </LinearLayout>

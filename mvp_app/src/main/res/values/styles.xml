@@ -1,9 +1,24 @@
 <resources>
 
     <style name="AppTheme" parent="AppBaseTheme"></style>
+    <style name="AppCompatTheme" parent="AppBaseAppCompatTheme"></style>
 
     <!-- Base application theme.基类主题 -->
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- toolbar（actionbar）颜色 -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- 状态栏颜色 -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!-- 窗口的背景颜色 -->
+        <item name="android:windowBackground">@color/windows_bg_white</item>
+        <!-- 波纹,滑动块颜色-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- 虚拟按键-->
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+    </style>
+
+    <!-- Base application theme.基类主题,支持AppCompatTheme -->
+    <style name="AppBaseAppCompatTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- toolbar（actionbar）颜色 -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <!-- 状态栏颜色 -->
@@ -31,5 +46,46 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/windows_bg_white</item>
         <item name="textAllCaps">true</item>
+    </style>
+
+    <!-- window 透明的-->
+    <style name="Theme.AppCompat.Translucent" parent="AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="dialog_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="login_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否全屏 -->
+        <item name="android:windowFullscreen">false</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 点击控件之外不关闭dilog -->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <!-- 背景透明   去掉背景色边框也就去掉了 -->
+        <item name="android:windowBackground">@null</item>
+        <!-- 模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    !--通用按钮设置-->
+    <style name="comm_button_wid_blue_style">
+        <item name="android:layout_width">240dp</item>
+        <item name="android:layout_height">44dp</item>
+
+        <item name="android:background">@drawable/comm_button_selector</item>
     </style>
 </resources>

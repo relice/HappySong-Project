@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_collect"
+            android:checkable="true"
+            android:title="@string/collect"/>
+     <!--   <item
+            android:id="@+id/menu_search"
+            android:title="@string/search"/>-->
+    </group>
+    <item android:title="其他功能">
+        <menu>
+            <item
+                android:id="@+id/menu_youSar"
+                android:title="@string/opensource"/>
+            <item
+                android:id="@+id/menu_heSay"
+                android:title="@string/videos"/>
+         <!--   <item
+                android:id="@+id/menu_weAre"
+                android:title="@string/weAre"/>-->
+        </menu>
+    </item>
+</menu>

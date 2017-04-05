@@ -1,15 +1,31 @@
 apply plugin: 'com.android.library'
 
+
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    buildToolsVersion '25.0.2'
+
+    //处理meta-inf 冲突问题
+    packagingOptions {
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        // as noted by @Vishnuvathsan you may also need to include
+        // variations on the file name. It depends on your dependencies.
+        // Some other common variations on notice and license file names
+        exclude 'META-INF/notice'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license'
+        exclude 'META-INF/license.txt'
+    }
 
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -19,14 +35,46 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':videolibrary')
+    //使用自定义gragle(具体查看dependencies.gradle)
+    Map<String, String> dependencies = rootProject.ext.dependencies
+    compile dependencies.retrofit
+    compile dependencies.retrofitAdapterRxJava
+    compile dependencies.retrofitConverterGson
+
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'io.reactivex:rxjava:x.y.z'
+    compile 'com.hwangjr.rxbus:rxbus:1.0.3'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.facebook.react:react-native:0.17.+'
     compile 'com.facebook.fresco:fresco:0.9.0+'
-    compile 'com.hwangjr.rxbus:rxbus:1.0.3'
+    compile 'com.commit451:PhotoView:1.2.4'
+    //仿新浪微博加载长图
+    compile 'com.davemorrissey.labs:subsampling-scale-image-view:3.4.1'
+    //跑马灯
+    compile 'com.sunfusheng:marqueeview:1.1.0'
 
+    compile 'com.nineoldandroids:library:2.4.0'
+//    compile 'com.github.sd6352051.niftydialogeffects:niftydialogeffects:1.0.0@aar'
 
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3'
+    //android原生
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+
+    //以下SDK开发者请根据需要自行选择
+    //bmob-sdk：Bmob的android sdk包，包含了Bmob的数据存储、文件等服务，以下是最新的bmob-sdk:
+    //3.5.0：请务必查看下面注释[1]
+    //    compile 'cn.bmob.android:bmob-sdk:3.5.0'
+    //    compile 'cn.bmob.android:bmob-sdk:3.5.3'
+    compile 'cn.bmob.android:bmob-sdk:3.4.6'
+    //bmob-push：Bmob的推送包
+    compile 'cn.bmob.android:bmob-push:0.8'
+    //bmob-sms ：Bmob单独为短信服务提供的包
+    compile 'cn.bmob.android:bmob-sms:1.0.1'
+    //如果你想应用能够兼容Android6.0，请添加此依赖(org.apache.http.legacy.jar)
+    compile 'cn.bmob.android:http-legacy:1.0'
 }

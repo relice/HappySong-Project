@@ -5,4 +5,9 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="content_item_margin">15dp</dimen>
     <dimen name="content_item_margin_bottom">10dp</dimen>
+
+
+    <dimen name="post_media_height">200dp</dimen>
+
+    <dimen name="seek_bar_image">150dp</dimen>
 </resources>

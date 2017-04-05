@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 实心透明 -->
+    <solid android:color="@color/colorPrimaryPrueDark"/>
+
+    <!-- 内边框宽度 -->
+    <stroke
+        android:width="1px"
+        android:color="@color/colorPrimaryDark"/>
+
+    <!-- 外边框宽度 -->
+    <padding
+        android:bottom="1px"
+        android:color="@color/comm_content_title_color"
+        android:left="1px"
+        android:right="1px"
+        android:top="1px"/>
+    <corners
+        android:radius="10dp"
+        />
+
+</shape>

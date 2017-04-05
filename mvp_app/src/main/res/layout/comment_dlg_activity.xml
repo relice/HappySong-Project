@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/rootView"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/colorPrimary"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="25dp">
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="评论"
+                android:textColor="@color/windows_bg_white"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="300dp"
+                android:layout_height="1px"
+                android:background="@color/very_light_grey"/>
+
+            <EditText
+                android:id="@+id/login_username_et"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="25dp"
+                android:background="@color/windows_bg_white"
+                android:gravity="left"
+                android:hint="有什么话想说的吗?"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"
+                android:textSize="15sp"/>
+
+            <Spinner
+                android:id="@+id/grade_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:entries="@array/grade"/>
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="50dp"
+                android:background="@color/dialog_bg"
+                android:text="确定"
+                android:textColor="@color/windows_bg_white"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/login_back_tv"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="25dp"
+                android:gravity="right"
+                android:text="悄悄的离开"
+                android:textColor="@color/windows_bg_white"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
